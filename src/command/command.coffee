@@ -1,4 +1,4 @@
-_ = require '../../bower_components/underscore/underscore'
+_ = require '../../node_modules/underscore/underscore'
 
 
 class Command

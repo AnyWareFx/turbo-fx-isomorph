@@ -10,5 +10,15 @@
     "browser",
     "turbo-fx"
   ],
+  "scripts": {
+    "postinstall": "webpack",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "webpack": "^1.9.10"
+  },
   "license": "MIT"
 }

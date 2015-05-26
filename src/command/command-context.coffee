@@ -1,4 +1,4 @@
-Command = require 'command'
+Command = require './command'
 
 
 class CommandContext
