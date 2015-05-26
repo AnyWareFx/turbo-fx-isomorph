@@ -1,5 +1,0 @@
-require '../../node_modules/underscore/underscore'
-require './command'
-require './command-context'
-require './macro-command'
-require './set-property-command'

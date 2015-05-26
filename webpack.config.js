@@ -1,11 +1,14 @@
 var Webpack = require('webpack');
+var glob = require("glob");
 
-var CommonsPlugin = new Webpack.optimize.CommonsChunkPlugin('fx-common.js');
+var commons = new Webpack.optimize.CommonsChunkPlugin('fx-common.js');
+
 
 module.exports = {
     entry: {
-        'fx-command': './src/command',
-        'fx-model': './src/model'
+        'fx-command': glob.sync('./src/command/*.coffee'),
+        'fx-model': glob.sync('./src/model/*.coffee'),
+        'turbo-fx-isomorph': glob.sync('./src/**/*.coffee')
     },
     output: {
         path: 'dist',
@@ -19,5 +22,5 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.json', '.coffee']
     },
-    plugins: [CommonsPlugin]
+    plugins: [commons]
 };
