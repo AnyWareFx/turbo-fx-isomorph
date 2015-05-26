@@ -1,0 +1,14 @@
+{
+  "author": "Dave Jackson <dave.jackson@anywarefx.com>",
+  "name": "turbo-fx-morph",
+  "version": "1.0.0",
+  "description": "Isomorphic CoffeeScript for Node.js and the Browser",
+  "keywords": [
+    "isomorphic",
+    "CoffeeScript",
+    "node",
+    "browser",
+    "turbo-fx"
+  ],
+  "license": "MIT"
+}
