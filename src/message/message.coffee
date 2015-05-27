@@ -1,8 +1,8 @@
 
 
 class Message
-  constructor: (options) ->
-    {@channel, @topic, @message, @value} = options
+  constructor: (attributes) ->
+    {@channel, @topic, @message, @value} = attributes
 
 
 module.exports Message

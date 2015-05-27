@@ -1,37 +1,14 @@
-_ = require '../../node_modules/underscore/underscore'
-Property = require './property'
+require './property'
 
 
 class Model
-  constructor: (properties) ->
-    properties = _.filter properties, (property) ->
-      property instanceof Property
+  @property 'metadata', value: [], writable: false, enumerable: false
 
-    _.each properties, (property) ->
-      Object.defineProperty @prototype, property.name, property.descriptor
-
-    meta =
-      enumerable: false
-      writable: false
-      value: properties
-
-    Object.defineProperty @prototype, 'meta', meta
-
-
-  toJSON: =>
+  toJSON: ->
     JSON.stringify @
 
-
-  fromJSON: (json) =>
-    parsed = JSON.parse json
-    values = _.difference _.keys parsed, _.methods parsed
-
-    properties = _.difference _.allKeys @, _.methods @
-
-    keys = _.intersection properties, values
-    _.each keys, (key) =>
-      @[key] = parsed[key]
-
+  # TODO See DrawFxWeb XModel
+  fromJSON: (json) ->
 
 
 module.exports = Model
